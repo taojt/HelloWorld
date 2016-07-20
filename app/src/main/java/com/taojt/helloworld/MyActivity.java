@@ -15,7 +15,7 @@ import android.widget.EditText;
 public class MyActivity extends AppCompatActivity {
     private EditText editText;
     private Button sendButton;
-    public static String EXTRA_MESSAGE;
+    public static String EXTRA_MESSAGE = "com.taojt.helloworld.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class MyActivity extends AppCompatActivity {
     }
     public void sendMessage(View view){
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        editText = (EditText) findViewById(R.id.edit_message);
+        EditText editText = (EditText) findViewById(R.id.edit_message);
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
