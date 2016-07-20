@@ -4,11 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="60dp"
+    android:paddingLeft="10dp"
     tools:context="com.taojt.helloworld.MyActivity"
     tools:showIn="@layout/activity_my">
 
-    <TextView
+    <EditText
+
+        android:id="@+id/edit_message"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message"/>
+    <Button
+        android:id="@+id/send_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/send_button"
+        android:onClick="sendMessage"/>
+
+
 </LinearLayout>
